@@ -34,7 +34,7 @@ const Navbar = async () => {
                 }}
                 className="flex items-center justify-center"
               >
-                <button type="submit" aria-label="Logout">
+                <button type="submit">
                   <span className="max-sm:hidden">Logout</span>
                   <LogOut className="size-5 sm:hidden" />
                 </button>
@@ -65,7 +65,7 @@ const Navbar = async () => {
                 await signIn("github");
               }}
             >
-              <button type="submit" aria-label="Sign in">
+              <button type="submit">
                 <span>Sign in</span>
               </button>
             </form>

@@ -57,8 +57,32 @@ const outFit = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Starts up",
-  description: "Pitch, claim and vote",
+  title: "Starts Up - Empower Your Ideas",
+  description:
+    "Starts Up is the ultimate platform to launch, scale, and manage your startups effortlessly. Join the community today!",
+  openGraph: {
+    title: "Starts Up - Empower Your Ideas",
+    description:
+      "Launch, scale, and manage your startup with our easy-to-use platform. Collaborate, innovate, and achieve success with Starts Up.",
+    url: "https://starts-up.vercel.app/",
+    siteName: "Starts Up",
+    images: [
+      {
+        url: "https://starts-up.vercel.app/static/images/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Starts Up - Empower Your Ideas",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Starts Up - Empower Your Ideas",
+    description:
+      "Starts Up helps you launch, scale, and manage your startup effortlessly. Join the movement today!",
+    images: ["https://starts-up.vercel.app/static/images/og-image.webp"],
+  },
 };
 
 export default function RootLayout({
