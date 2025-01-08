@@ -68,6 +68,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preconnect"
+          href="https://o4508493446643712.ingest.us.sentry.io"
+          crossOrigin=""
+        />
+        <link
+          rel="dns-prefetch"
+          href="https://o4508493446643712.ingest.us.sentry.io"
+        />
+      </head>
       <body className={`${outFit.variable}`}>
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </body>

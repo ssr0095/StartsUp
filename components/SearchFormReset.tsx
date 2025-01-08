@@ -12,7 +12,12 @@ const SearchFormReset = () => {
     router.push("/");
   };
   return (
-    <button type="reset" onClick={reset} className="search-btn">
+    <button
+      type="reset"
+      onClick={reset}
+      className="search-btn"
+      aria-label="Clear"
+    >
       <X className="size-5" />
     </button>
   );

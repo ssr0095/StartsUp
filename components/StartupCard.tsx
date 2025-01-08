@@ -41,19 +41,20 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
           </Link>
         </div>
         <div>
-          <Link href={`/user/${author?._id}`}>
+          <Link href={`/user/${author?._id}`} aria-label="User profile">
             <Image
               src={author?.image ? author?.image : "https://placehold.co/48x48"}
               alt="placeHold"
               width={44}
               height={44}
               className="size-12 rounded-full bg-black"
+              loading="lazy"
             />
           </Link>
         </div>
       </div>
 
-      <Link href={`/startup/${_id}`}>
+      <Link href={`/startup/${_id}`} aria-label={post.title}>
         <p className="startup-card_desc">{description}</p>
         <Image
           src={image ? image : "https://placehold.co/640x400"}
@@ -61,13 +62,16 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
           width={640}
           height={400}
           className="startup-card_img"
+          placeholder="blur"
+          loading="lazy"
         />
       </Link>
       <div className="flex-between mt-5 gap-3">
         <Link href={`/?query=${category?.toLowerCase()}`}>{category}</Link>
-        <Button className="startup-card_btn">
-          <Link href={`/startup/${_id}`}>Details</Link>
-        </Button>
+
+        <Link href={`/startup/${_id}`} className="startup-card_btn">
+          Details
+        </Link>
       </div>
     </li>
   );
