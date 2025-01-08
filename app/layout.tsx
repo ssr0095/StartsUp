@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     siteName: "Starts Up",
     images: [
       {
-        url: "https://starts-up.vercel.app/static/og-image.jpg",
+        url: "/static/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Starts Up - Empower Your Ideas",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "Starts Up - Empower Your Ideas",
     description:
       "Starts Up helps you launch, scale, and manage your startup effortlessly. Join the movement today!",
-    images: ["https://starts-up.vercel.app/static/og-image.jpg"],
+    images: ["/static/og-image.jpg"],
   },
 };
 
