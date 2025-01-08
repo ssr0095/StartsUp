@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "easymde/dist/easymde.min.css";
+import { Suspense } from "react";
+import Loading from "@/components/Loading";
 
 const outFit = localFont({
   src: [
@@ -66,7 +68,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outFit.variable}`}>{children}</body>
+      <body className={`${outFit.variable}`}>
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      </body>
     </html>
   );
 }
